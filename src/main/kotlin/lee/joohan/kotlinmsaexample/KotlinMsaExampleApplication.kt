@@ -10,11 +10,4 @@ class KotlinMsaExampleApplication
 
 fun main(args: Array<String>) {
 	runApplication<KotlinMsaExampleApplication>(*args)
-
-	@Controller
-	class FirstController(val exampleService: ExampleService) {
-		@GetMapping(value = ["/hello/{name}"])
-		@ResponseBody
-		fun hello(@PathVariable name : String) = exampleService.getHello(name);
-	}
 }
