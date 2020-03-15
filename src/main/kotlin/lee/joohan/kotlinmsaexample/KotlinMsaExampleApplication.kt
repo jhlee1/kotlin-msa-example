@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
 
 	@Controller
 	class FirstController(val exampleService: ExampleService) {
-		@GetMapping(value = ["/hello"])
+		@GetMapping(value = ["/hello/{name}"])
 		@ResponseBody
 		fun hello(@PathVariable name : String) = exampleService.getHello(name);
 	}
