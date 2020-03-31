@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: "development"
+
+service:
+  message:
+    text: "hello"
+    simple: "not_hello"
+
+one:
+  bool: true
+  value: 100
+another:
+  bool: false
+  value: 10
+some:
+  value:
+    "asdb"
+
+server:
+  port: 6080
+---
+spring:
+  profiles: "development"
+service:
+  type: "simple"
+  message:
+    text: "hello dev"
+---
+spring:
+  profiles: "production"
+
+service:
+  type: "advance"
+  message:
+    text: "hello prod"
+---
+

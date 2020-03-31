@@ -1,8 +1,0 @@
-package lee.joohan.kotlinmsaexample
-
-import org.springframework.stereotype.Service
-
-@Service
-class ExampleService {
-    fun getHello(name :String) = "Hello $name"
-}
